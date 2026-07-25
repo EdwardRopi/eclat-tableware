@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ÉCLAT — премиальная посуда для дома</title>
+<meta name="description" content="ÉCLAT — фарфор, хрусталь и столовое серебро ручной работы. Сервизы, которые превращают ужин в событие.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══ ПРЕЛОАДЕР ══ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__mark">É</div>
+    <div class="preloader__word">ÉCLAT</div>
+    <div class="preloader__bar"><span id="preloaderFill"></span></div>
+    <div class="preloader__num"><span id="preloaderNum">0</span>%</div>
+  </div>
+</div>
+
+<!-- ══ КУРСОР ══ -->
+<div class="cursor" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ══ ПОЛОСА ПРОКРУТКИ ══ -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- ══ ЗЕРНО ══ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ══ ШАПКА ══ -->
+<header class="header" id="header">
+  <div class="header__in">
+    <a href="#top" class="logo" data-cursor>
+      <span class="logo__mark">É</span>
+      <span class="logo__text">ÉCLAT<em>maison de porcelaine</em></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#collections" data-cursor>Коллекции</a>
+      <a href="#catalog" data-cursor>Каталог</a>
+      <a href="#craft" data-cursor>Мастерская</a>
+      <a href="#voices" data-cursor>Отзывы</a>
+      <a href="#contact" data-cursor>Контакты</a>
+    </nav>
+
+    <div class="header__act">
+      <a href="#contact" class="btn btn--ghost btn--sm" data-cursor>Подобрать сервиз</a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ══ ГЕРОЙ ══ -->
+<section class="hero" id="hero">
+  <div class="hero__media" id="heroMedia">
+    <img src="assets/img/hero-setting.jpg" alt="Сервировка стола: фарфор с золочёным кантом и позолоченные приборы">
+  </div>
+  <div class="hero__veil"></div>
+
+  <div class="hero__in">
+    <p class="hero__eyebrow" data-reveal>С 1847 года · Лиможский фарфор</p>
+    <h1 class="hero__title" id="heroTitle">Искусство сервировки</h1>
+    <p class="hero__lead" data-reveal style="--i:1">
+      Сервизы ручной работы из костяного фарфора, хрусталя и серебра.
+      Каждый предмет проходит девятнадцать этапов и руки сорока двух мастеров.
+    </p>
+    <div class="hero__cta" data-reveal style="--i:2">
+      <a href="#catalog" class="btn btn--gold" data-cursor>Смотреть каталог</a>
+      <a href="#craft" class="btn btn--line" data-cursor>Как мы это делаем</a>
+    </div>
+  </div>
+
+  <a href="#manifesto" class="scroll-hint" data-cursor>
+    <span>прокрутите</span>
+    <i></i>
+  </a>
+</section>
+
+<!-- ══ БЕГУЩАЯ СТРОКА ══ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__row">
+    <span>Фарфор&nbsp;&nbsp;✦&nbsp;&nbsp;Хрусталь&nbsp;&nbsp;✦&nbsp;&nbsp;Столовое серебро&nbsp;&nbsp;✦&nbsp;&nbsp;Ручная роспись&nbsp;&nbsp;✦&nbsp;&nbsp;Золочение 24К&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+    <span>Фарфор&nbsp;&nbsp;✦&nbsp;&nbsp;Хрусталь&nbsp;&nbsp;✦&nbsp;&nbsp;Столовое серебро&nbsp;&nbsp;✦&nbsp;&nbsp;Ручная роспись&nbsp;&nbsp;✦&nbsp;&nbsp;Золочение 24К&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ══ МАНИФЕСТ ══ -->
+<section class="manifesto" id="manifesto">
+  <div class="wrap manifesto__grid">
+    <div class="manifesto__text">
+      <p class="label" data-reveal>Философия</p>
+      <h2 class="split-lines" data-split>
+        Посуда живёт дольше, чем мода. Мы делаем её так, чтобы она пережила и нас.
+      </h2>
+      <p class="lede" data-reveal style="--i:1">
+        Каждая тарелка ÉCLAT рождается из смеси каолина, полевого шпата и кварца — рецепта,
+        который в нашей мануфактуре не меняли с середины XIX века. Обжиг при 1400 °C делает
+        черепок белым и прозрачным на просвет, а золочение наносится кистью вручную:
+        одна кайма — сорок минут работы мастера.
+      </p>
+      <ul class="marks" data-reveal style="--i:2">
+        <li><strong>1400 °C</strong><span>температура финального обжига</span></li>
+        <li><strong>24К</strong><span>чистое золото в отводке</span></li>
+        <li><strong>30 лет</strong><span>гарантия на белизну черепка</span></li>
+      </ul>
+    </div>
+
+    <figure class="manifesto__fig" data-parallax="0.12">
+      <div class="manifesto__frame">
+        <img src="assets/img/heritage.jpg" alt="Натюрморт: фарфоровый кувшин и золочёный сосуд">
+      </div>
+      <figcaption>Из собрания мануфактуры, XVII век</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══ КОЛЛЕКЦИИ · ГОРИЗОНТАЛЬНАЯ ПРОКРУТКА ══ -->
+<section class="collections" id="collections">
+  <div class="collections__sticky">
+    <div class="collections__head wrap">
+      <p class="label">Коллекции</p>
+      <h2>Четыре материала — <em>один стол</em></h2>
+    </div>
+
+    <div class="collections__track" id="colTrack">
+      <article class="col-card">
+        <span class="col-card__num">01</span>
+        <h3>Фарфор</h3>
+        <p>Костяной фарфор с содержанием золы 45 % — тонкий, звонкий, просвечивающий на солнце.</p>
+        <span class="col-card__link" data-cursor>18 сервизов</span>
+      </article>
+      <article class="col-card">
+        <span class="col-card__num">02</span>
+        <h3>Хрусталь</h3>
+        <p>Ручная огранка бокалов и графинов. Свинца 24 % — отсюда вес, блеск и чистый звук.</p>
+        <span class="col-card__link" data-cursor>26 предметов</span>
+      </article>
+      <article class="col-card">
+        <span class="col-card__num">03</span>
+        <h3>Столовое серебро</h3>
+        <p>Приборы 925-й пробы с гравировкой на черенке. Полируются вручную до зеркала.</p>
+        <span class="col-card__link" data-cursor>9 линий</span>
+      </article>
+      <article class="col-card">
+        <span class="col-card__num">04</span>
+        <h3>Керамика</h3>
+        <p>Малые серии от приглашённых мастеров: неровная кромка, живая глазурь, характер.</p>
+        <span class="col-card__link" data-cursor>ограниченный выпуск</span>
+      </article>
+    </div>
+
+    <div class="collections__rail"><span id="colRail"></span></div>
+  </div>
+</section>
+
+<!-- ══ КАТАЛОГ ══ -->
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="label" data-reveal>Каталог</p>
+        <h2 data-reveal style="--i:1">Избранное этого сезона</h2>
+      </div>
+      <p class="sec-head__note" data-reveal style="--i:2">
+        Шесть позиций из&nbsp;текущей коллекции. Полный ассортимент — 240&nbsp;наименований.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card" data-reveal data-tilt>
+        <div class="card__media">
+          <img src="assets/img/p-gilt.jpg" alt="Тарелка с золочёной каймой и кобальтовым орнаментом">
+          <span class="card__tag">хит</span>
+        </div>
+        <div class="card__body">
+          <h3>«Ар-Деко»</h3>
+          <p>Сервиз столовый, 24 предмета</p>
+          <div class="card__foot"><span class="price">189 000 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--i:1" data-tilt>
+        <div class="card__media">
+          <img src="assets/img/p-white-set.jpg" alt="Белый матовый чайный набор">
+        </div>
+        <div class="card__body">
+          <h3>«Бланш»</h3>
+          <p>Набор чайный, 12 предметов</p>
+          <div class="card__foot"><span class="price">74 500 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--i:2" data-tilt>
+        <div class="card__media">
+          <img src="assets/img/p-teapot.jpg" alt="Заварочный чайник из костяного фарфора с рельефом">
+        </div>
+        <div class="card__body">
+          <h3>«Клевер»</h3>
+          <p>Чайник заварочный, 900 мл</p>
+          <div class="card__foot"><span class="price">32 900 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--i:3" data-tilt>
+        <div class="card__media">
+          <img src="assets/img/p-ornament.jpg" alt="Тарелка обеденная с ручной росписью и позолотой">
+        </div>
+        <div class="card__body">
+          <h3>«Гринвуд»</h3>
+          <p>Тарелка обеденная, ручная роспись</p>
+          <div class="card__foot"><span class="price">18 400 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--i:4" data-tilt>
+        <div class="card__media">
+          <img src="assets/img/artisan-bowls.jpg" alt="Коллекция расписных керамических пиал">
+        </div>
+        <div class="card__body">
+          <h3>«Ателье»</h3>
+          <p>Коллекция пиал, 6 предметов</p>
+          <div class="card__foot"><span class="price">46 000 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal style="--i:5" data-tilt>
+        <div class="card__media">
+          <img src="assets/img/feature-state-china.jpg" alt="Парадный сервиз с пурпурной каймой и золочением">
+          <span class="card__tag card__tag--lim">лимит</span>
+        </div>
+        <div class="card__body">
+          <h3>«Резиденция»</h3>
+          <p>Сервиз парадный, 60 предметов</p>
+          <div class="card__foot"><span class="price">420 000 ₽</span><span class="card__go" data-cursor>смотреть</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ПАРАЛЛАКС-ПОЛОСА СО СТАТИСТИКОЙ ══ -->
+<section class="stats">
+  <div class="stats__bg" data-parallax="0.18">
+    <img src="assets/img/atmosphere.jpg" alt="">
+  </div>
+  <div class="stats__veil"></div>
+  <div class="wrap stats__in">
+    <h2 data-reveal>Цифры, за которыми стоят руки</h2>
+    <div class="stats__row">
+      <div class="stat" data-reveal><b data-count="1847" data-plain>0</b><span>год основания мануфактуры</span></div>
+      <div class="stat" data-reveal style="--i:1"><b data-count="42">0</b><span>мастеров в цехе росписи</span></div>
+      <div class="stat" data-reveal style="--i:2"><b data-count="19">0</b><span>этапов до готового изделия</span></div>
+      <div class="stat" data-reveal style="--i:3"><b data-count="100">0</b><span>% ручной работы</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ МАСТЕРСКАЯ ══ -->
+<section class="craft" id="craft">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="label" data-reveal>Мастерская</p>
+        <h2 data-reveal style="--i:1">Путь одной тарелки</h2>
+      </div>
+      <p class="sec-head__note" data-reveal style="--i:2">
+        От сырой массы до упаковки проходит 34&nbsp;дня. Сократить этот срок нельзя —
+        фарфор не терпит спешки.
+      </p>
+    </div>
+
+    <ol class="steps" id="steps">
+      <li class="step" data-reveal>
+        <span class="step__n">01</span>
+        <h3>Формовка</h3>
+        <p>Жидкую массу заливают в гипсовую форму. Гипс вытягивает влагу, на стенках нарастает черепок нужной толщины.</p>
+      </li>
+      <li class="step" data-reveal style="--i:1">
+        <span class="step__n">02</span>
+        <h3>Утильный обжиг</h3>
+        <p>Первый проход печи при 900 °C. Изделие теряет 14 % объёма и становится пористым — готовым принять глазурь.</p>
+      </li>
+      <li class="step" data-reveal style="--i:2">
+        <span class="step__n">03</span>
+        <h3>Роспись и золочение</h3>
+        <p>Кобальт под глазурь, золото — поверх. Кайму ведут одним движением: исправить линию уже невозможно.</p>
+      </li>
+      <li class="step" data-reveal style="--i:3">
+        <span class="step__n">04</span>
+        <h3>Политой обжиг</h3>
+        <p>1400 °C, 26 часов. Глазурь сплавляется с черепком в одно целое — отсюда прозрачность и звон.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ ОТЗЫВЫ ══ -->
+<section class="voices" id="voices">
+  <div class="wrap">
+    <p class="label" data-reveal>Отзывы</p>
+    <div class="quotes" id="quotes">
+      <blockquote class="quote is-on">
+        <p>Заказывала «Ар-Деко» на серебряную свадьбу родителей. Коробку открывали всей семьёй — и минут пять просто молчали. Золото не «жёлтое», а тёплое, как на старых сервизах бабушки.</p>
+        <footer><b>Наталья Ветрова</b><span>Санкт-Петербург</span></footer>
+      </blockquote>
+      <blockquote class="quote">
+        <p>Держу ресторан на двенадцать столов. За два года ни одного скола на кромке, хотя посудомойка работает по восемь циклов в день. Для меня это главный аргумент.</p>
+        <footer><b>Игорь Демьяненко</b><span>Казань</span></footer>
+      </blockquote>
+      <blockquote class="quote">
+        <p>Приехала в мастерскую посмотреть, как наносят кайму. Мастер вёл линию сорок минут и ни разу не отвёл руку. После такого цена вопросов не вызывает.</p>
+        <footer><b>Алиса Корнеева</b><span>Москва</span></footer>
+      </blockquote>
+    </div>
+    <div class="quotes__dots" id="quoteDots"></div>
+  </div>
+</section>
+
+<!-- ══ ПРИЗЫВ ══ -->
+<section class="cta" id="contact">
+  <div class="wrap cta__in">
+    <h2 data-reveal>Подберём сервиз под ваш стол</h2>
+    <p data-reveal style="--i:1">
+      Оставьте почту — консультант пришлёт подборку из трёх коллекций
+      с учётом размера стола, числа персон и повода.
+    </p>
+    <form class="form" id="form" data-reveal style="--i:2" novalidate>
+      <input type="email" id="email" placeholder="ваша почта" aria-label="Электронная почта" required>
+      <button type="submit" class="btn btn--gold" data-cursor>Получить подборку</button>
+    </form>
+    <p class="form__note" id="formNote" role="status"></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ ПОДВАЛ ══ -->
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="logo__mark">É</span>
+      <p>ÉCLAT<em>maison de porcelaine</em></p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#collections" data-cursor>Коллекции</a>
+      <a href="#catalog" data-cursor>Каталог</a>
+      <a href="#craft" data-cursor>Мастерская</a>
+      <a href="#voices" data-cursor>Отзывы</a>
+    </nav>
+    <div class="footer__meta">
+      <p>Москва, Кузнецкий Мост, 9</p>
+      <p>+7 495 000-00-00</p>
+      <p>salon@eclat.example</p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© 2026 ÉCLAT. Демонстрационный сайт.</span>
+    <span>Фотографии — Wikimedia Commons и Openverse, лицензии CC / общественное достояние.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх" data-cursor>↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
